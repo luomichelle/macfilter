@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import './michelle.css';
+import Maclists from './Maclists'
 
 class Michelle extends Component{
+
+  constructor(props) {
+    super(props);
+    this.state = { greetings: ['Michelle', 'Simon', 'Roni'] };
+  }
+  renderGreetings() {
+    return this.state.greetings.map(name => (
+      <maclists
+        key={name}
+        name={name}
+      />
+    ));
+  }
 
 	render() {
 	  return (
@@ -28,13 +42,8 @@ class Michelle extends Component{
 		    			<th>Edit</th>
 		    			<th>All</th>
 		    		</tr>
-		    		<tr className="label gray">
-		    			<th>Michelle</th>
-		    			<th>6c:72:e7:22:e8:6e</th>
-		    			<th>2.5 / 5 </th>
-		    			<th>Change</th>
-		    			<th>Delete</th>
-		    		</tr>
+
+            <Maclists />
 	    		</tbody>
 	    	</table>
 	    </div>
