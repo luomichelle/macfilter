@@ -1,0 +1,39 @@
+.michelle{
+  padding:2%;
+}
+.flex-container{
+  width:100%;
+  border:1px black solid;
+}
+tr{
+    display:flex;
+}
+th{
+  width:20%;
+}
+tr.label{
+  border-top:1px lightblue solid;
+  border-bottom:1px lightblue solid;
+  font-size:70%;
+}
+
+.label th{
+  padding:2%;
+  padding-top:1%;
+  padding-bottom:1%;
+  border:1px lightblue solid;
+}
+
+tr.gray th{
+  color:gray;
+}
+
+button.addNew{
+  border:1px black solid;
+  position: relative;
+  float: right;
+  margin-bottom:1%;
+  padding:2%;
+  padding-top:1%;
+  padding-bottom:1%;
+}
