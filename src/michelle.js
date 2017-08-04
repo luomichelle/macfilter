@@ -1,26 +1,41 @@
 import React, { Component } from 'react';
 import './michelle.css';
-import Maclists from './Maclists'
+import Maclists from './Maclists';
+import AddMac from './addMac';
 
 class Michelle extends Component{
 
   constructor(props) {
     super(props);
-    this.state = { greetings: ['Michelle', 'Simon', 'Roni'] };
+    this.state = { macaddress: ['11.11.11.11.11', '22.22.22.22.22', '33.33.33.33.33.33'] };
+    this.linkMacaddress = this.linkMacaddress.bind(this);
   }
-  renderGreetings() {
-    return this.state.greetings.map(name => (
-      <maclists
+  renderMacaddress() {
+
+    return this.state.macaddress.map(name => (
+      <Maclists
         key={name}
         name={name}
       />
     ));
   }
 
+  linkMacaddress(newName){
+    this.setState({ 
+      //remain this.state.greetings
+      macaddress: [...this.state.macaddress, newName] 
+    });
+  }
+
+
+
 	render() {
 	  return (
 	    <div className="michelle">
 	    	<button className="addNew">+ Add New MAC Filter</button>
+
+
+
 	    	<table className="flex-container">
 	    		<tbody>
 		    		<tr>
@@ -42,8 +57,8 @@ class Michelle extends Component{
 		    			<th>Edit</th>
 		    			<th>All</th>
 		    		</tr>
-
-            <Maclists />
+            <AddMac linkMacaddress={this.linkMacaddress}/>
+            {this.renderMacaddress()}
 	    		</tbody>
 	    	</table>
 	    </div>
