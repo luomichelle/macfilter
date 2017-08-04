@@ -32,7 +32,7 @@ class Michelle extends Component{
 	render() {
 	  return (
 	    <div className="michelle">
-	    	<button className="addNew">+ Add New MAC Filter</button>
+        <AddMac linkMacaddress={this.linkMacaddress}/>
 
 
 
@@ -57,7 +57,6 @@ class Michelle extends Component{
 		    			<th>Edit</th>
 		    			<th>All</th>
 		    		</tr>
-            <AddMac linkMacaddress={this.linkMacaddress}/>
             {this.renderMacaddress()}
 	    		</tbody>
 	    	</table>

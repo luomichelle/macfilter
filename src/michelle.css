@@ -28,8 +28,7 @@ tr.gray th{
   color:gray;
 }
 
-button.addNew{
-  border:1px black solid;
+.addNew{
   position: relative;
   float: right;
   margin-bottom:1%;

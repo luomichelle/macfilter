@@ -21,14 +21,14 @@ class AddMac extends Component {
 
    render() {
 	  return (
-	    <div className="AddGreeter">
+	    <div className="addNew" >
 	      <input
 	        type="text"
 	        onChange={this.handleUpdate}
 	        value={this.state.newMacname}
 	      />
 	      &nbsp;&nbsp;
-	      <button onClick={this.linkMacaddress}>Add</button>
+	      <button onClick={this.linkMacaddress}>+ Add New MAC Filter</button>
 	    </div>
 	  );
 	}
