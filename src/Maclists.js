@@ -18,7 +18,7 @@ class Maclists extends Component {
               <th>Michelle</th>
               <th>{this.state.name}:{this.props.name}</th>
               <th>2.5 / 5 </th>
-              <th>Change</th>
+              <th><button>Edit</button></th>
               <th>
               <button onClick={this.removeMacaddress}>Delete</button>
               </th>
