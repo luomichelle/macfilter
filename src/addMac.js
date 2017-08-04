@@ -7,11 +7,13 @@ class AddMac extends Component {
 		this.state = {newMacname:''};
 		this.handleUpdate = this.handleUpdate.bind(this);
 		this.linkMacaddress = this.linkMacaddress.bind(this);
+		//linkMacadress is bind with function of linkMacaddress
 	}
 	handleUpdate(event) {
 	  	//change value:
 	    this.setState({ newMacname: event.target.value });
 	}
+	//input trigger handupdate first(STATE), and handupdate passdown(PROS) newmacname to linkmacaddress();
 	linkMacaddress(){
 		//passing value that when user click
 		this.props.linkMacaddress(this.state.newMacname);

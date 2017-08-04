@@ -1,3 +1,8 @@
+
+button{
+  cursor: pointer;
+}
+
 .michelle{
   padding:2%;
 }
@@ -8,7 +13,7 @@
 tr{
     display:flex;
 }
-th{
+th{ 
   width:20%;
 }
 tr.label{

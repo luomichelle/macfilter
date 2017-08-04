@@ -9,6 +9,7 @@ class Michelle extends Component{
     super(props);
     this.state = { macaddress: ['11.11.11.11.11', '22.22.22.22.22', '33.33.33.33.33.33'] };
     this.linkMacaddress = this.linkMacaddress.bind(this);
+    this.removeMacaddress = this.removeMacaddress.bind(this);
   }
   renderMacaddress() {
 
@@ -16,26 +17,29 @@ class Michelle extends Component{
       <Maclists
         key={name}
         name={name}
+        removeMacaddress={this.removeMacaddress}
       />
     ));
   }
 
   linkMacaddress(newName){
     this.setState({ 
-      //remain this.state.greetings
+      //link with origin macaddress, ... means array.
       macaddress: [...this.state.macaddress, newName] 
     });
   }
 
-
+  removeMacaddress(removeName) {   //remove element inside of the heelowworld file.
+    const filteredmac = this.state.macaddress.filter(name => {
+      return name !== removeName;
+    });
+    this.setState({ macaddress: filteredmac });
+  }
 
 	render() {
 	  return (
 	    <div className="michelle">
         <AddMac linkMacaddress={this.linkMacaddress}/>
-
-
-
 	    	<table className="flex-container">
 	    		<tbody>
 		    		<tr>
