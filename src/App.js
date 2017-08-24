@@ -3,7 +3,7 @@ import './App.css';
 // import Mac from './Mac';
 import Maclist from './maclist';
 
-class App extends React.Component {
+class App extends Component {
 
   constructor(props){
     super(props)

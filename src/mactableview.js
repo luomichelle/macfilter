@@ -1,5 +1,4 @@
 import React from 'react';
-import Mac from './mac';
 
 class Mactableview extends React.Component {
 	constructor(props){
@@ -7,17 +6,25 @@ class Mactableview extends React.Component {
 	}
 
 	render(){
-
 		return(
+			<div className="Mactaleview">
 
-				<div className="view">
+				<h1>
+					{this.props.id}
+				</h1>
+				
+				<h2 className="Mactaleview_key">
+					{this.props.macaddress} 
+				</h2>
+				<h3>
 
-				</div>
+					{this.props.content}
+				</h3>
 
+
+			</div>
 			)
 	}
-
-
 }
 
 

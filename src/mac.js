@@ -11,15 +11,16 @@ class Mac extends React.Component {
 
 
 	render() {
-
 		return(
-				<div>
+			<Mactaleview 
 
-				</div>
+			macaddress={this.props.macaddress} 
 
-			)
+			content = {this.props.content}
 
-
+			id = {this.props.id} 
+			/>
+		)
 	}
 }
 

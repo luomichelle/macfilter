@@ -9,7 +9,10 @@ class Maclist extends React.Component{
 		return this.props.mactables.map((mactables) => {
 			return <Mac
 				key = {mactables.id}
-				mactables = {mactables.macaddress}
+
+				macaddress = {mactables.macaddress}
+				content = {mactables.content}
+				id = {mactables.id}
 			/>;
 		});
 	}
@@ -24,8 +27,6 @@ class Maclist extends React.Component{
 
 	}
 }
-
-
 
 
 
