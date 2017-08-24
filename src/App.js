@@ -3,7 +3,7 @@ import './App.css';
 // import Mac from './Mac';
 import Maclist from './maclist';
 
-class App extends Component {
+class App extends React.Component {
 
   constructor(props){
     super(props)
@@ -14,15 +14,23 @@ class App extends Component {
       selectedMacAddress: 0,
       isSelected: false,
 
-    }
+    };
   }
-  componentWillMount(){
+  componentWillMount() {
     this.setState({
       mactables:this.props.mactables
-    })
+    });
+  }
+  filterMacs() {
+    return this.state.mactables.filter((mactables) => {
+      let value = this.state.search.replace(/\\/g, '\\\\');
+      return mactables.title.search(value) !== -1 || mactables.content.search(value) !== -1;
+    });
   }
 
   render() {
+
+    let mactables = this.state.search.length ? this.filterMacs() : this.state.mactables;
     return (
       <div className="App">
         <div className="App-header"> 
@@ -31,7 +39,7 @@ class App extends Component {
         <p className="App-intro">
         </p>
         <Maclist
-
+          mactables={mactables}
         />
       </div>
     );

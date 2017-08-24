@@ -15,8 +15,6 @@ class Mac extends React.Component {
 		return(
 				<div>
 
-
-					<Mactaleview macsampleData={this.props.macsampleData}/>
 				</div>
 
 			)
@@ -24,3 +22,7 @@ class Mac extends React.Component {
 
 	}
 }
+
+
+
+export default Mac;
